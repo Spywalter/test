@@ -1,12 +1,11 @@
 <?php
-
 namespace App\Livewire;
 
 use App\Models\Todo;
-use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
-Use Livewire\WithPagination;
+use Livewire\WithPagination;
 
 class Crud extends Component
 {
@@ -14,82 +13,75 @@ class Crud extends Component
     use WithPagination;
     #[Validate('required')]
     public $task;
-     #[Validate('required')]
+    #[Validate('required')]
     public $date;
 
     public $edittingID;
     public $edittingTask;
     public $edittingDate;
 
-
-
-    public function create(){
+    public function create()
+    {
 
         $this->validate();
         Todo::create([
 
-            'task'=>$this->task,
-            'date'=>$this->date,
-          
+            'task' => $this->task,
+            'date' => $this->date,
+
         ]);
         $this->reset();
-        session()->flash("success","Successfully created.");
+        session()->flash("success", "Successfully created.");
         $this->redirect("/crud");
 
-        
     }
-    public function edit($id){
+    public function edit($id)
+    {
 
         $this->edittingID = Todo::find($id)->id;
 
         $this->edittingTask = Todo::find($id)->task;
         $this->edittingDate = Todo::find($id)->date;
 
-       
-        
-        
-
     }
 
-    public function update(){
-
+    public function update()
+    {
 
         Todo::find($this->edittingID)->update([
 
-                'task'=>$this->edittingTask,
-                'date'=>$this->edittingDate,
+            'task' => $this->edittingTask,
+            'date' => $this->edittingDate,
 
         ]);
         $this->reset();
-        session()->flash("update","Successfully updated!");
+        session()->flash("update", "Successfully updated!");
         $this->redirect("/crud");
 
     }
-    public function cancel(){
+    public function cancel()
+    {
 
-
-
-        $this->reset("task","date");
+        $this->reset("task", "date");
         $this->redirect("/crud");
     }
 
-    public function delete($id){
-
+    public function delete($id)
+    {
 
         Todo::find($id)->delete();
-        $this->reset("task","date");
+        $this->reset("task", "date");
 
-        session()->flash("deleted","Deleted Successfully!");
+        session()->flash("deleted", "Deleted Successfully!");
         $this->redirect("/crud");
 
     }
-
 
     public function render()
     {
-        return view('livewire.crud',[
+        return view('livewire.crud', [
 
-            'todos'=>Todo::simplePaginate(5)
+            'todos' => DB::table('todos')->orderBy('id', 'desc')->paginate(10),
 
         ]);
     }

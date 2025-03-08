@@ -1,33 +1,28 @@
 <div>
     {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
 
+
+
+    <livewire:user-role />
+
     <div class="p-10 mt-24 ml-56 text-justify text-white ">
 
-        <h3 class="mb-4 font-bold">LIST OF USER</h3>
-        <table class="w-full text-left ">
+        <h3 class="mb-4 font-bold">PROFILE INFORMATION</h3>
 
-            <tr class="w-full">
-                <th class="p-2 border border-slate-300 ">Name</th>
-                <th class="p-2 border border-slate-300 ">Email</th>
-                <th class="p-2 border border-slate-300 ">Role</th>
-                <th class="p-2 border border-slate-300 ">Action</th>
-            </tr>
+        <div class="flex flex-col mt-10 gap-y-4">
 
 
 
-            <tr>
-                <td class="p-2 border border-slate-300 ">asds</td>
-                <td class="p-2 border border-slate-300">asddsddssds</td>
-                <td class="p-2 border border-slate-300">asds</td>
-                <td class="p-2 border border-slate-300">
-                    <div class="flex flex-row gap-x-4">
-                        <i class="fa-solid fa-pen" style="color:green;"></i> <i class="fa-solid fa-trash "
-                            style="color:red"></i>
+            <img class="inline-block rounded-full size-10 ring-2 ring-white"
+                src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt="">
 
-                    </div>
-                </td>
-            </tr>
+            <span>Name: {{ $name }}</span>
+            <span>Email: {{ $email }}</span>
+            <span>Role: {{ $role }}</span>
 
-        </table>
+        </div>
+
+
     </div>
 </div>

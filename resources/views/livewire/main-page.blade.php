@@ -272,26 +272,26 @@
 
                         <div
                             class="flex flex-col p-4 bg-gray-800 rounded-md h-52 w-60 transition duration-300 ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-105">
-                            <img src="/todo.png" alt="" class="w-56 ">
+                            <img src="/role.png" alt="" class="w-56 ">
                             <label class="mt-6 text-center text-white " for="">USER ROLE MANAGEMENT
                             </label>
-                            <a wire:navigate href="/crud" class="w-full mt-5 text-end">
+                            <a wire:navigate href="/login" class="w-full mt-5 text-end">
                                 <span class="px-4 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Visit &#8594;</span>
                             </a>
                         </div>
                         <div
                             class="flex flex-col p-4 bg-gray-800 rounded-md h-52 w-60 transition duration-300 ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-105">
-                            <img src="/todo.png" alt="" class="w-56 ">
+                            <img src="/print.png" alt="" class="w-56 ">
                             <label class="mt-6 text-center text-white " for="">PRINT PDF
                             </label>
-                            <a wire:navigate href="/crud" class="w-full mt-5 text-end">
+                            <a wire:navigate href="/print_page" class="w-full mt-5 text-end">
                                 <span class="px-4 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Visit &#8594;</span>
                             </a>
                         </div>
                         <div
                             class="flex flex-col p-4 bg-gray-800 rounded-md h-52 w-60 transition duration-300 ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-105">
                             <img src="/todo.png" alt="" class="w-56 ">
-                            <label class="mt-6 text-center text-white " for="">MUSIC/VIDEO COLLECTION
+                            <label class="mt-6 text-center text-white " for="">SEARCH MUSIC/VIDEO COLLECTION
                             </label>
                             <a wire:navigate href="/crud" class="w-full mt-5 text-end">
                                 <span class="px-4 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Visit &#8594;</span>
@@ -305,40 +305,30 @@
 
                         <div
                             class="flex flex-col p-4 bg-gray-800 rounded-md h-52 w-60 transition duration-300 ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-105">
-                            <img src="/todo.png" alt="" class="w-56 ">
-                            <label class="mt-6 text-center text-white " for="">EMAIL SENDER NOTIFICATION
+                            <img src="/leave.png" alt="" class="w-56 ">
+                            <label class="mt-6 text-center text-white " for="">LEAVE MANAGEMENT
+                                SYSTEM
                             </label>
-                            <a wire:navigate href="/crud" class="w-full mt-5 text-end">
+                            <span class="text-xs text-center text-green-700 ">already serving users</span>
+                            <a href="https://ehrisleaves.bislig.org/" class="w-full mt-2 text-end">
                                 <span class="px-4 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Visit &#8594;</span>
+                            </a>
+                        </div>
+
+                        <div
+                            class="flex flex-col p-4 bg-gray-800 rounded-md h-52 w-60 transition duration-300 ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-105">
+                            <a wire:navigate href="/crud" class="w-full mt-5 text-end">
+                                <span class="px-4 py-2 bg-gray-800 rounded-md hover:bg-gray-900"></span>
                             </a>
                         </div>
                         <div
                             class="flex flex-col p-4 bg-gray-800 rounded-md h-52 w-60 transition duration-300 ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-105">
-                            <img src="/todo.png" alt="" class="w-56 ">
-                            <label class="mt-6 text-center text-white " for="">SMS NOTIFICATION
-                            </label>
                             <a wire:navigate href="/crud" class="w-full mt-5 text-end">
-                                <span class="px-4 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Visit &#8594;</span>
+                                <span class="px-4 py-2 bg-gray-800 rounded-md hover:bg-gray-900"> </span>
                             </a>
                         </div>
-                        <div
-                            class="flex flex-col p-4 bg-gray-800 rounded-md h-52 w-60 transition duration-300 ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-105">
-                            <img src="/todo.png" alt="" class="w-56 ">
-                            <label class="mt-6 text-center text-white " for="">CHAT AI
-                            </label>
-                            <a wire:navigate href="/crud" class="w-full mt-5 text-end">
-                                <span class="px-4 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Visit &#8594;</span>
-                            </a>
-                        </div>
-                        <div
-                            class="flex flex-col p-4 bg-gray-800 rounded-md h-52 w-60 transition duration-300 ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-105">
-                            <img src="/todo.png" alt="" class="w-56 ">
-                            <label class="mt-6 text-center text-white " for="">TOURIST BOOKING SYSTEM
-                            </label>
-                            <a wire:navigate href="/crud" class="w-full mt-5 text-end">
-                                <span class="px-4 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Visit &#8594;</span>
-                            </a>
-                        </div>
+
+
 
 
                     </div>

@@ -41,6 +41,8 @@ class LiveSearch extends Component
         $this->email = $result->email;
         $this->role  = $result->role;
 
+        $this->searchName = $this->name;
+
     }
 
     public function render()
@@ -48,6 +50,6 @@ class LiveSearch extends Component
         return view('livewire.live-search', [
 
             'users' => DB::table('users')->orderBy('id', 'DESC')->paginate(10),
-        ]);
+        ])->title('Live Search Page');
     }
 }

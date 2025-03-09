@@ -83,6 +83,6 @@ class Crud extends Component
 
             'todos' => DB::table('todos')->orderBy('id', 'desc')->paginate(10),
 
-        ]);
+        ])->title('Crud Page');
     }
 }

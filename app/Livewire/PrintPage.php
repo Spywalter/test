@@ -28,7 +28,7 @@ class PrintPage extends Component
         return view('livewire.print-page', [
 
             'users' => DB::table('users')->orderBy('id', 'DESC')->paginate(10),
-        ]);
+        ])->title('Print Page');
     }
 
 }

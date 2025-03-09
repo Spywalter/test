@@ -67,23 +67,23 @@
                     </table>
 
                 </div>
-                <div class="flex flex-col gap-y-8 w-80">
+                <div class="flex flex-col w-full gap-y-8">
                     <input @keyup="search_open =true" @click="search_open =true"
                         wire:model.live.debounce.950ms='searchName' type="text"
-                        class="h-10 p-1 mt-10 text-black rounded-sm w-80" placeholder="Search name">
+                        class="w-full h-10 p-1 mt-10 text-black rounded-sm" placeholder="Search name">
                 </div>
 
 
 
                 @if (sizeof($nameresults) > 0)
-                    <div class="flex items-center justify-center p-1 bg-white cursor-pointer ml-36 ">
+                    <div class="flex items-center justify-center w-full p-1 bg-white cursor-pointer ">
 
                         <div class="">
                             @foreach ($this->nameresults as $nameresult)
-                                <div x-show="search_open" @click.outside="search_open = false">
-                                    <div @click="search_open = false" class="cursor-pointer w-96 hover:bg-gray-300"
+                                <div x-show="search_open" @click.outside="search_open = false" class="w-full">
+                                    <div @click="search_open = false" class="p-2 cursor-pointer w-96 hover:bg-gray-300"
                                         wire:click='selectName({{ $nameresult->id }})'>
-                                        <span class="p-5 ">{{ $nameresult->name }}
+                                        <span class="w-full">{{ $nameresult->name }}
                                         </span>
                                     </div>
 

@@ -12,6 +12,6 @@ class AdminPage extends Component
 
             'users' => DB::table('users')->paginate(5),
 
-        ]);
+        ])->title('Admin Page');
     }
 }

@@ -293,7 +293,7 @@
                             <img src="/search.png" alt="" class="w-56 ">
                             <label class="mt-6 text-center text-white " for="">LIVE SEARCH
                             </label>
-                            <a wire:navigate href="/search" class="w-full mt-5 text-end">
+                            <a wire:navigate href="/live_search" class="w-full mt-5 text-end">
                                 <span class="px-4 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Visit &#8594;</span>
                             </a>
                         </div>
@@ -310,7 +310,7 @@
                                 SYSTEM
                             </label>
                             <span class="text-xs text-center text-green-700 ">already serving users</span>
-                            <a href="https://ehrisleaves.bislig.org/" class="w-full mt-2 text-end">
+                            <a wire:navigate href="https://ehrisleaves.bislig.org/" class="w-full mt-2 text-end">
                                 <span class="px-4 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Visit &#8594;</span>
                             </a>
                         </div>
@@ -362,7 +362,7 @@
             </div>
 
             <p class="mb-1 text-sm text-white">Designed & Built by Walter Lad</p>
-            <p class="text-sm text-white">Copyright © 2024 - All right reserved</p>
+            <p class="text-sm text-white">Copyright © 2025 - All right reserved</p>
 
 
 

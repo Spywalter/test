@@ -29,6 +29,6 @@ class UserRole extends Component
     }
     public function render()
     {
-        return view('livewire.user-role');
+        return view('livewire.user-role')->title('User Role Page');
     }
 }

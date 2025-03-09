@@ -27,6 +27,6 @@ class UserList extends Component
 
             'users' => DB::table('users')->paginate(5),
 
-        ]);
+        ])->title('Users Page');
     }
 }

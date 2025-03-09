@@ -71,13 +71,18 @@ new #[Layout('layouts.guest')] class extends Component {
         </div>
 
 
+        <a wire:navigate class="text-red-800" href="/register">Click here to signup</a>
+
+
         <div class="flex flex-col mt-5">
 
             <span class="text-xs">
                 <span class="font-bold uppercase">Guest login -</span>
 
                 Email: user@gmail.com
-                Password: user123$
+                Password: user1234
+                Email: user1@gmail.com
+                Password: user1234
 
 
             </span>
@@ -86,7 +91,7 @@ new #[Layout('layouts.guest')] class extends Component {
 
 
                 Email: admin@gmail.com
-                Password: admin123$
+                Password: admin1234
 
             </span>
 

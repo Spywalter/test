@@ -3,7 +3,7 @@
     <section id="home">
         <div x-data="{ atTop: true }" @scroll.window="atTop=window.pageYOffset>50?false:true"
             class="fixed inset-0 top-0 right-0 z-40 flex flex-row w-full h-20 p-0 px-5 py-3 bg-gray-900 place-content-between"
-            :class="(atTop === false) ? 'opacity-75' : ''">
+            :class="(atTop === false) ? 'opacity-75' : ''" x-cloak>
 
             <div class="text-left ml-28 font-poppins ">
 
@@ -290,10 +290,10 @@
                         </div>
                         <div
                             class="flex flex-col p-4 bg-gray-800 rounded-md h-52 w-60 transition duration-300 ease-in-out delay-150  hover:-translate-y-0.5 hover:scale-105">
-                            <img src="/todo.png" alt="" class="w-56 ">
-                            <label class="mt-6 text-center text-white " for="">SEARCH MUSIC/VIDEO COLLECTION
+                            <img src="/search.png" alt="" class="w-56 ">
+                            <label class="mt-6 text-center text-white " for="">LIVE SEARCH
                             </label>
-                            <a wire:navigate href="/crud" class="w-full mt-5 text-end">
+                            <a wire:navigate href="/search" class="w-full mt-5 text-end">
                                 <span class="px-4 py-2 bg-gray-800 rounded-md hover:bg-gray-900">Visit &#8594;</span>
                             </a>
                         </div>

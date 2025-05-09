@@ -62,7 +62,7 @@ class BaseUrl extends LivewireAttribute
 
         $decoded = is_array($initialValue)
             ? json_decode(json_encode($initialValue), true)
-            : json_decode($initialValue, true);
+            : json_decode($initialValue ?? '', true);
 
         // If only part of an array is present in the query string,
         // we want to merge instead of override the value...
@@ -78,7 +78,7 @@ class BaseUrl extends LivewireAttribute
             $value = $decoded === null ? $initialValue : $decoded;
         }
 
-        $this->setValue($value);
+        $this->setValue($value, $this->nullable);
     }
 
     protected function recursivelyMergeArraysWithoutAppendingDuplicateValues(&$array1, &$array2)
@@ -146,7 +146,7 @@ class BaseUrl extends LivewireAttribute
 
     public function getFromRefererUrlQueryString($url, $key, $default = null)
     {
-        $parsedUrl = parse_url($url);
+        $parsedUrl = parse_url($url ?? '');
         $query = [];
 
         if (isset($parsedUrl['query'])) {
